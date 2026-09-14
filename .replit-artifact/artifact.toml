@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/"
+title = "مؤشر سرعة الإنترنت"
+description = "تطبيق أندرويد خفيف يعرض سرعة الإنترنت بوضوح في شريط الحالة مع إعدادات عربية وإنجليزية وسجل استخدام منظم."
+version = "1.0.0"
+id = "artifacts/internet-speed-indicator"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 23384
+
+[services.development]
+run = "pnpm --filter @workspace/internet-speed-indicator run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/internet-speed-indicator", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/internet-speed-indicator", "run", "serve" ]
+
+[services.env]
+PORT = "23384"
+BASE_PATH = "/"

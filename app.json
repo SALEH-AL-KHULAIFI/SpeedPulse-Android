@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "مؤشر سرعة الإنترنت",
+    "slug": "internet-speed-indicator",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon-generated.png",
+    "scheme": "internet-speed-indicator",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {
+      "package": "com.speedpulse.indicator",
+      "softwareKeyboardLayoutMode": "resize",
+      "allowBackup": false
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": ["expo-router", "./plugins/withSpeedOverlay.js"],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
